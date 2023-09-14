@@ -1,11 +1,12 @@
 import React from 'react';
-import {Text, View} from 'react-native';
+import { CounterScreen, TestScreen } from './src/screens';
 
 const App = () => {
   return (
-    <View>
-      <Text>anachi</Text>
-    </View>
+    <>
+      {/* <TestScreen /> */}
+      <CounterScreen />
+    </>
   );
 };
 
