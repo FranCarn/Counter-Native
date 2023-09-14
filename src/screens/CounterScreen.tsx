@@ -8,7 +8,8 @@ export const CounterScreen = () => {
     <View style={styles.container}>
       <Text style={{ fontSize: 30 }}>Counter: {counter}</Text>
 
-      <Fab setCounter={setCounter} title="+1" position="left" />
+      <Fab onPress={() => setCounter((prev) => prev + 1)} title="+1" position="br" />
+      <Fab onPress={() => setCounter((prev) => prev - 1)} title="-1" position="bl" />
     </View>
   );
 };

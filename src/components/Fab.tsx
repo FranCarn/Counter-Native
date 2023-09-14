@@ -2,15 +2,17 @@ import React from 'react';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
 interface Props {
-  counter: number;
-  position: 'left' | 'right';
+  position?: 'br' | 'bl';
   title: string;
-  setCounter: (state: number) => void;
+  onPress: () => void;
 }
 
-export const Fab = ({ setCounter, counter, title, position }: Props) => {
+export const Fab = ({ position, title, onPress }: Props) => {
   return (
-    <TouchableOpacity onPress={() => setCounter(counter + 1)} style={styles.fabLocationBR}>
+    <TouchableOpacity
+      onPress={onPress}
+      style={position === 'br' ? styles.fabLocationBR : styles.fabLocationBL}
+    >
       <View style={styles.fab}>
         <Text style={styles.fabText}>{title}</Text>
       </View>
