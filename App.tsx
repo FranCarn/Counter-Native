@@ -1,13 +1,8 @@
 import React from 'react';
-import { CounterScreen, TestScreen } from './src/screens';
+import { CounterScreen } from './src/screens';
 
 const App = () => {
-  return (
-    <>
-      {/* <TestScreen /> */}
-      <CounterScreen />
-    </>
-  );
+  return <CounterScreen />;
 };
 
 export default App;
