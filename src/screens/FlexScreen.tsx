@@ -14,9 +14,9 @@ export const FlexScreen = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    flexWrap: 'wrap',
     backgroundColor: '#28c4d9',
-    justifyContent: 'center',
-    alignItems: 'flex-end',
+    alignItems: 'flex-start',
   },
   box1: {
     alignSelf: 'flex-start',
