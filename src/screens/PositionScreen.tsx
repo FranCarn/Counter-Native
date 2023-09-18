@@ -4,9 +4,9 @@ import { StyleSheet, View } from 'react-native';
 export const PositionScreen = () => {
   return (
     <View style={styles.container}>
+      <View style={styles.greenBox} />
       <View style={styles.purpleBox} />
       <View style={styles.orangeBox} />
-      <View style={styles.greenBox} />
     </View>
   );
 };
