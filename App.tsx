@@ -1,5 +1,11 @@
 import React from 'react';
-import { CounterScreen, BoxObjectModelScreen, TestScreen, DimensionsScreen } from './src/screens';
+import {
+  CounterScreen,
+  BoxObjectModelScreen,
+  TestScreen,
+  DimensionsScreen,
+  PositionScreen,
+} from './src/screens';
 import { SafeAreaView } from 'react-native';
 
 const App = () => {
@@ -8,7 +14,8 @@ const App = () => {
       {/* <TestScreen /> */}
       {/* <CounterScreen /> */}
       {/* <BoxObjectModelScreen /> */}
-      <DimensionsScreen />
+      {/* <DimensionsScreen /> */}
+      <PositionScreen />
     </SafeAreaView>
   );
 };
