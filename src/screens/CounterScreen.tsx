@@ -4,12 +4,16 @@ import { Fab } from '../components/';
 
 export const CounterScreen = () => {
   const [counter, setCounter] = useState<number>(0);
+  const handleCounter = (number: number) => {
+    setCounter((prevCounter) => (number === -1 && prevCounter === 0 ? 0 : prevCounter + number));
+  };
+
   return (
     <View style={styles.container}>
       <Text style={{ fontSize: 30 }}>Counter: {counter}</Text>
 
-      <Fab onPress={() => setCounter((prev) => prev + 1)} title="+1" position="br" />
-      <Fab onPress={() => setCounter((prev) => prev - 1)} title="-1" position="bl" />
+      <Fab onPress={() => handleCounter(+1)} title="+1" position="br" />
+      <Fab onPress={() => handleCounter(-1)} title="-1" position="bl" />
     </View>
   );
 };
